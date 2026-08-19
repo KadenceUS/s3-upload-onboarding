@@ -79,7 +79,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 14px 22px 8px;
+    padding: 18px 22px;
+  }
+
+  .site-header + .site-header {
+    border-top: 1px solid var(--border);
   }
 
   .site-name {
@@ -137,25 +141,6 @@
     transform: translateX(2px);
   }
 
-  .gist-embed-container {
-    padding: 0 22px 6px;
-  }
-
-  .gist-embed-container .gist {
-    font-size: 12px;
-    margin-bottom: 0 !important;
-  }
-
-  /* Tame the default gist embed chrome to sit quietly inside the card */
-  .gist-embed-container .gist .gist-file {
-    border-radius: 6px;
-    border-color: var(--border) !important;
-  }
-
-  .gist-embed-container .gist .gist-data {
-    border-radius: 6px 6px 0 0;
-  }
-
   .footer-note {
     margin-top: 36px;
     font-size: 12.5px;
@@ -199,9 +184,6 @@
         </a>
       </div>
     </div>
-    <div class="gist-embed-container">
-      <script src="https://gist.github.com/hmorad-kadence/4162de2804e865edd84fb579cf778b42.js"></script>
-    </div>
 
     <div class="site-header">
       <div class="site-name">
@@ -212,16 +194,11 @@
         </a>
       </div>
     </div>
-    <div class="gist-embed-container">
-      <script src="https://gist.github.com/hmorad-kadence/74f3ed3ab2406ca835d802f7949d28c2.js"></script>
-    </div>
 
   </div>
 
   <p class="footer-note">
-    <strong>Note:</strong> This page embeds live GitHub gists and requires an internet connection
-    and JavaScript to render the instructions below each header. If a section appears empty, click
-    the site name above it to open the gist directly.
+    <strong>Note:</strong> Each listing opens its site's setup instructions in a new tab.
   </p>
 </div>
 
