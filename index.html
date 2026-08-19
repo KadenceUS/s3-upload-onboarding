@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mew: AWS Setup Reference</title>
+<style>
+  :root {
+    --navy: #16143d;
+    --indigo: #2D2A8C;
+    --indigo-light: #4d49b8;
+    --bg: #f7f7fb;
+    --card-bg: #ffffff;
+    --border: #e3e2f0;
+    --text: #24223f;
+    --text-muted: #6c6a8a;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+  }
+
+  .topbar {
+    background: var(--navy);
+    padding: 16px 32px;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+
+  .topbar-label {
+    color: #8f8dc2;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .topbar-title {
+    color: #ffffff;
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+  }
+
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+  }
+
+  h1 {
+    font-size: 26px;
+    margin: 0 0 8px;
+    color: var(--navy);
+    letter-spacing: -0.3px;
+  }
+
+  .subtitle {
+    color: var(--text-muted);
+    font-size: 14.5px;
+    margin: 0 0 40px;
+    line-height: 1.6;
+  }
+
+  .site-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 22px 8px;
+  }
+
+  .site-name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .site-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--indigo);
+    color: #fff;
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    padding: 4px 0;
+    min-width: 44px;
+    border-radius: 5px;
+  }
+
+  .site-title-link {
+    font-size: 15.5px;
+    font-weight: 600;
+    color: var(--navy);
+    text-decoration: none;
+    width: 150px;
+    flex-shrink: 0;
+  }
+
+  .site-title-link:hover {
+    color: var(--indigo);
+    text-decoration: underline;
+  }
+
+  .site-arrow-link {
+    color: var(--indigo);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-left: 4px;
+    transition: color 0.15s ease, transform 0.15s ease;
+  }
+
+  .site-arrow-link svg {
+    width: 26px;
+    height: 26px;
+    display: block;
+  }
+
+  .site-arrow-link:hover {
+    color: var(--indigo);
+    transform: translateX(2px);
+  }
+
+  .gist-embed-container {
+    padding: 0 22px 6px;
+  }
+
+  .gist-embed-container .gist {
+    font-size: 12px;
+    margin-bottom: 0 !important;
+  }
+
+  /* Tame the default gist embed chrome to sit quietly inside the card */
+  .gist-embed-container .gist .gist-file {
+    border-radius: 6px;
+    border-color: var(--border) !important;
+  }
+
+  .gist-embed-container .gist .gist-data {
+    border-radius: 6px 6px 0 0;
+  }
+
+  .footer-note {
+    margin-top: 36px;
+    font-size: 12.5px;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  .footer-note strong {
+    color: var(--navy);
+  }
+
+  @media (max-width: 600px) {
+    .wrap { padding: 32px 16px 60px; }
+    .site-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span class="topbar-label">Kadence Data Team</span>
+  <span class="topbar-title">Mew</span>
+</div>
+
+<div class="wrap">
+  <h1>AWS CLI Setup Reference</h1>
+  <p class="subtitle">
+    Setup instructions for configuring AWS CLI access on site laptops. Each site uses its own
+    scoped credentials: only upload to your assigned site's docs and share credentials only
+    with that site's team.
+  </p>
+
+  <div class="site-card">
+
+    <div class="site-header">
+      <div class="site-name">
+        <span class="site-badge">LA</span>
+        <a class="site-title-link" href="https://gist.github.com/hmorad-kadence/4162de2804e865edd84fb579cf778b42" target="_blank" rel="noopener">Los Angeles Setup</a>
+        <a class="site-arrow-link" href="https://gist.github.com/hmorad-kadence/4162de2804e865edd84fb579cf778b42" target="_blank" rel="noopener" aria-label="Open Los Angeles Site Setup gist">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="gist-embed-container">
+      <script src="https://gist.github.com/hmorad-kadence/4162de2804e865edd84fb579cf778b42.js"></script>
+    </div>
+
+    <div class="site-header">
+      <div class="site-name">
+        <span class="site-badge">BKK</span>
+        <a class="site-title-link" href="https://gist.github.com/hmorad-kadence/74f3ed3ab2406ca835d802f7949d28c2" target="_blank" rel="noopener">Bangkok Setup</a>
+        <a class="site-arrow-link" href="https://gist.github.com/hmorad-kadence/74f3ed3ab2406ca835d802f7949d28c2" target="_blank" rel="noopener" aria-label="Open Bangkok Site Setup gist">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="gist-embed-container">
+      <script src="https://gist.github.com/hmorad-kadence/74f3ed3ab2406ca835d802f7949d28c2.js"></script>
+    </div>
+
+  </div>
+
+  <p class="footer-note">
+    <strong>Note:</strong> This page embeds live GitHub gists and requires an internet connection
+    and JavaScript to render the instructions below each header. If a section appears empty, click
+    the site name above it to open the gist directly.
+  </p>
+</div>
+
+</body>
+</html>
